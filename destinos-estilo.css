@@ -66,12 +66,12 @@
 }
 
 .but {
+	color: #ffffff;
     width:100%;
     height:50px;
     background-color: blue;
     align-content: center; 
     bottom:0;
-	color: #fff;
 }
 
 .pais h3 {
