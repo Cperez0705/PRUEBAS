@@ -11,7 +11,7 @@ fetch('destinos.json')
       divPais.classList.add('pais');
 
       // Título del país
-      const tituloPais = document.createElement('h3');
+      const tituloPais = document.createElement('h2');
       tituloPais.textContent = pais.PAIS;
       tituloPais.style.cursor = 'pointer';
 
