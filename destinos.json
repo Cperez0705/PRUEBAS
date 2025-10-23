@@ -35,25 +35,25 @@
         "NOMBRE": "Río de Janeiro",
         "DIAS": "4 días / 3 noches",
         "PRECIO": "$850.00",
-        "IMG": "https://source.unsplash.com/400x300/?rio"
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
       },
       {
         "NOMBRE": "São Paulo",
         "DIAS": "3 días / 2 noches",
         "PRECIO": "$699.00",
-        "IMG": "https://source.unsplash.com/400x300/?saopaulo"
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
       },
       {
         "NOMBRE": "Salvador de Bahía",
         "DIAS": "5 días / 4 noches",
         "PRECIO": "$920.00",
-        "IMG": "https://source.unsplash.com/400x300/?salvador"
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
       },
       {
         "NOMBRE": "Florianópolis",
         "DIAS": "4 días / 3 noches",
         "PRECIO": "$799.00",
-        "IMG": "https://source.unsplash.com/400x300/?florianopolis"
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
       }
     ]
   }
