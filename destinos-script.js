@@ -26,7 +26,7 @@ fetch('destinos.json')
         item.classList.add('item');
 
         item.innerHTML = `
-          <h3 class="item">${ciudad.NOMBRE}</h3>
+          <h3>${ciudad.NOMBRE}</h3>
           <img src="${ciudad.IMG}" alt="${ciudad.NOMBRE}">
           <div class="desc">
             <div class="dias">${ciudad.DIAS}</div>
