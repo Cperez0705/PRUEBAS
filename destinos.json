@@ -12,19 +12,19 @@
         "NOMBRE": "Buenos Aires",
         "DIAS": "3 días / 2 noches",
         "PRECIO": "$499.00",
-        "IMG": "https://source.unsplash.com/400x300/?buenosaires"
+        "IMG": "https://static.wixstatic.com/media/31a5da_e95080272b1946c19c36a13ecd6b08c2~mv2.jpg"
       },
       {
         "NOMBRE": "Mendoza",
         "DIAS": "5 días / 4 noches",
         "PRECIO": "$799.00",
-        "IMG": "https://source.unsplash.com/400x300/?mendoza"
+        "IMG": "https://static.wixstatic.com/media/31a5da_e95080272b1946c19c36a13ecd6b08c2~mv2.jpg"
       },
       {
         "NOMBRE": "Córdoba",
         "DIAS": "3 días / 2 noches",
         "PRECIO": "$599.00",
-        "IMG": "https://source.unsplash.com/400x300/?cordoba,argentina"
+        "IMG": "https://static.wixstatic.com/media/31a5da_e95080272b1946c19c36a13ecd6b08c2~mv2.jpg"
       }
     ]
   },
