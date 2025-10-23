@@ -74,15 +74,6 @@
     bottom:0;
 }
 
-.pais h3 {
-  background-color: #003366;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
 .pais h3:hover {
   background-color: #0055aa;
 }
