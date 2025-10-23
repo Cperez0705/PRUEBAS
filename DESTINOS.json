@@ -1,0 +1,60 @@
+[
+  {
+    "PAIS": "Argentina",
+    "CIUDADES": [
+      {
+        "NOMBRE": "Bariloche",
+        "DIAS": "4 días / 3 noches",
+        "PRECIO": "$699.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_e95080272b1946c19c36a13ecd6b08c2~mv2.jpg"
+      },
+      {
+        "NOMBRE": "Buenos Aires",
+        "DIAS": "3 días / 2 noches",
+        "PRECIO": "$499.00",
+        "IMG": "https://source.unsplash.com/400x300/?buenosaires"
+      },
+      {
+        "NOMBRE": "Mendoza",
+        "DIAS": "5 días / 4 noches",
+        "PRECIO": "$799.00",
+        "IMG": "https://source.unsplash.com/400x300/?mendoza"
+      },
+      {
+        "NOMBRE": "Córdoba",
+        "DIAS": "3 días / 2 noches",
+        "PRECIO": "$599.00",
+        "IMG": "https://source.unsplash.com/400x300/?cordoba,argentina"
+      }
+    ]
+  },
+  {
+    "PAIS": "Brasil",
+    "CIUDADES": [
+      {
+        "NOMBRE": "Río de Janeiro",
+        "DIAS": "4 días / 3 noches",
+        "PRECIO": "$850.00",
+        "IMG": "https://source.unsplash.com/400x300/?rio"
+      },
+      {
+        "NOMBRE": "São Paulo",
+        "DIAS": "3 días / 2 noches",
+        "PRECIO": "$699.00",
+        "IMG": "https://source.unsplash.com/400x300/?saopaulo"
+      },
+      {
+        "NOMBRE": "Salvador de Bahía",
+        "DIAS": "5 días / 4 noches",
+        "PRECIO": "$920.00",
+        "IMG": "https://source.unsplash.com/400x300/?salvador"
+      },
+      {
+        "NOMBRE": "Florianópolis",
+        "DIAS": "4 días / 3 noches",
+        "PRECIO": "$799.00",
+        "IMG": "https://source.unsplash.com/400x300/?florianopolis"
+      }
+    ]
+  }
+]
