@@ -58,10 +58,10 @@
     ]
   },
   {
-    "PAIS": Colombia",
+    "PAIS": "Colombia",
     "CIUDADES": [
       {
-        "NOMBRE": Bogota",
+        "NOMBRE": "Bogota",
         "DIAS": "4 días / 3 noches",
         "PRECIO": "$850.00",
         "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
