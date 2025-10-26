@@ -56,5 +56,63 @@
         "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
       }
     ]
+  },
+  {
+    "PAIS": Colombia",
+    "CIUDADES": [
+      {
+        "NOMBRE": Bogota",
+        "DIAS": "4 días / 3 noches",
+        "PRECIO": "$850.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
+      },
+      {
+        "NOMBRE": "Cartagena",
+        "DIAS": "3 días / 2 noches",
+        "PRECIO": "$699.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
+      },
+      {
+        "NOMBRE": "Medellin",
+        "DIAS": "5 días / 4 noches",
+        "PRECIO": "$920.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
+      },
+      {
+        "NOMBRE": "Medellin",
+        "DIAS": "4 días / 3 noches",
+        "PRECIO": "$799.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
+      }
+    ]
+  },
+ {
+    "PAIS": "Mexico",
+    "CIUDADES": [
+      {
+        "NOMBRE": "Cancún",
+        "DIAS": "4 días / 3 noches",
+        "PRECIO": "$850.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
+      },
+      {
+        "NOMBRE": "Ciudad de Mexico",
+        "DIAS": "3 días / 2 noches",
+        "PRECIO": "$699.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
+      },
+      {
+        "NOMBRE": "Costa Mujeres",
+        "DIAS": "5 días / 4 noches",
+        "PRECIO": "$920.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
+      },
+      {
+        "NOMBRE": "Riviera Maya",
+        "DIAS": "4 días / 3 noches",
+        "PRECIO": "$799.00",
+        "IMG": "https://static.wixstatic.com/media/31a5da_bb1aa69ac9f245ed926c619e5cea93af~mv2.jpg"
+      }
+    ]
   }
 ]
