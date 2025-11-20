@@ -72,10 +72,12 @@
     background-color: blue;
     align-content: center; 
     bottom:0;
+	transition: width 2s;
 }
 
 .but:hover{
 	background-color: #ffffff;
+	width:150%;
 }
 
 .but a{
