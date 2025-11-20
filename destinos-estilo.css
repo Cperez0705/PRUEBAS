@@ -72,7 +72,7 @@
     background-color: blue;
     align-content: center; 
     bottom:0;
-	transition: width 2s, background-color 4s color 2s;
+	transition: width 2s, background-color 4s, color 2s;
 }
 
 .but:hover{
