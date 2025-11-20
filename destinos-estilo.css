@@ -72,12 +72,13 @@
     background-color: blue;
     align-content: center; 
     bottom:0;
-	transition: width 2s, background-color 4s;
+	transition: width 2s, height 2s, background-color 4s;
 }
 
 .but:hover{
-	width:70%;
 	color: blue;
+	width:70%;
+	height:100px;
 	background-color: #ffffff;
 }
 
