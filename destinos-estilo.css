@@ -75,7 +75,7 @@
 	transition: width 2s, height 2s, background-color 4s;
 }
 
-.but:hover{
+.but div:hover{
 	color: blue;
 	width:70%;
 	height:100px;
