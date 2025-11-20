@@ -72,7 +72,7 @@
     background-color: blue;
     align-content: center; 
     bottom:0;
-	transition: width 2s, background-color 4s;
+	transition: width 2s, background-color 4s color 2s;
 }
 
 .but:hover{
@@ -87,10 +87,12 @@
 	text-decoration: none;
 	font-weight: bold;
 	color: #ffffff;
+	transition: color 2s;
 }
 
 .but a:hover{
 	color:blue;
+	background-color:green;
 }
 
 .pais h2 {
