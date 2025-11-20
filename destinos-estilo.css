@@ -76,7 +76,6 @@
 
 .but:hover{
 	background-color: #ffffff;
-	color: blue;
 }
 
 .but a{
@@ -85,6 +84,9 @@
 	color: #ffffff;
 }
 
+.but a:hover{
+	color:blue;
+}
 .pais h2 {
   background-color: #003366;
   color: white;
