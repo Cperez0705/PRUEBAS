@@ -72,13 +72,16 @@
     background-color: blue;
     align-content: center; 
     bottom:0;
-	text-decoration: none;
-	font-weight: bold;
 }
 
 .but:hover{
 	background-color: #ffffff;
 	color: blue;
+}
+
+.but a{
+	text-decoration: none;
+	font-weight: bold;
 }
 
 .pais h2 {
