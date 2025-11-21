@@ -79,19 +79,6 @@
 	background-color: #ffffff;
 }
 
-.but a{
-	width: 100%;
-	heigth:100%;
-	text-decoration: none;
-	font-weight: bold;
-	color: #ffffff;
-	transition: color 2s;
-}
-
-.but a:hover{
-color: blue;
-}
-
 .pais h2 {
   background-color: #003366;
   color: white;
