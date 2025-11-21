@@ -31,7 +31,7 @@ fetch('destinos.json')
           <div class="desc">
             <div class="dias">${ciudad.DIAS}</div>
             <div class="desde">Desde: ${ciudad.PRECIO}</div>
-            <div class="but"><a href="#">Ver más</a></div>
+            <button class="but" href="#">Ver más</button>
           </div>
         `;
 
