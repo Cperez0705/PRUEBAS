@@ -76,12 +76,11 @@
 
 .but:hover{
 	color: blue;
-	width:70%;
 	background-color: #ffffff;
 }
 
 .but a{
-	width: auto;
+	width: 100%;
 	heigth:100%;
 	text-decoration: none;
 	font-weight: bold;
@@ -91,7 +90,6 @@
 
 .but a:hover{
 color: blue;
-	background-color:green;
 }
 
 .pais h2 {
