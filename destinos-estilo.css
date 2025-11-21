@@ -9,7 +9,7 @@
     height:auto;
     background-color:green;
     margin:0;
-    padding:5vw;
+    padding:50px;
     display: flex;
     column-gap:50px;
     row-gap: 50px;
@@ -23,8 +23,8 @@
   height:320px;
   background-color:red;
   text-align:center;
-  margin:0;
-  padding:0;
+  margin: auto;
+  padding: auto;
 }
 
 .item h3{
