@@ -30,7 +30,6 @@ width:15vw;
     height:320px;
     background-color:red;
     text-align:center;
-    display: grid;
 }
 
 .item h3{
@@ -107,7 +106,7 @@ width:15vw;
 @media screen and (max-width: 500px){
 .items{
     padding:5px;
-    column-gap:5px;
+    column-gap:15px;
     row-gap: 15px;
 }
 .item{
