@@ -100,8 +100,19 @@
     row-gap: 20px;
 }
 .item{
-  width:120px;
-  height:200px;
+    width:120px;
+    height:200px;
 }
-	
+	.item h3{
+    height: 20px;
+}
+ .item img{
+    height: 120px;
+}
+ .desc{
+    height: 20px;
+}
+ .but{
+    height: 20px;
+}
 }
