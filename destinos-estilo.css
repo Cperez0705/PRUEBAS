@@ -3,9 +3,9 @@ box-sizing:border-box;
     font-size: 18px;
 }
 
-h1{
+.titulo h1{
 	background-color: #c2c2c2;
-	font-size: 1.5rem;
+	font-size: 1.33rem;
 	text-align: center; 
 	margin: 20px;
 	color: red;
@@ -14,7 +14,7 @@ h1{
 .items{
 width:100%;
     height:auto;
-    background-color:green;
+    background-color: green;
     margin:0;
     padding:50px;
     display: flex;
