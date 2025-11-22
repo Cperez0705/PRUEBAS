@@ -26,10 +26,10 @@ width:100%;
 
 .item{
 width:15vw;
-    min-width:200px;
-    height:320px;
-    background-color:red;
-    text-align:center;
+    min-width: 200px;
+    height: 320px;
+    background-color: red;
+    text-align: center;
 }
 
 .item h3{
