@@ -4,10 +4,11 @@ box-sizing:border-box;
 }
 
 .titulo{
-	font-size:20px;
-	text-align:center; 
-	margin:20px;"
+	font-size: 20px;
+	text-align: center; 
+	margin: 20px;
 }
+
 .items{
 width:100%;
     height:auto;
