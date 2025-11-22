@@ -3,7 +3,7 @@ box-sizing:border-box;
     font-size: 16px;
 }
 
-.titulo{
+.titulo h1{
 	font-size: 20px;
 	text-align: center; 
 	margin: 20px;
