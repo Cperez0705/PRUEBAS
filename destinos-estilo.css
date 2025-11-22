@@ -3,8 +3,9 @@ box-sizing:border-box;
     font-size: 16px;
 }
 
-h1{
-	font-size: 20px;
+.titulo h1{
+	background-color: #c2c2c2;
+	font-size: 24px;
 	text-align: center; 
 	margin: 20px;
 }
