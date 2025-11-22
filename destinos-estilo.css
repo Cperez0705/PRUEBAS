@@ -1,11 +1,11 @@
 *{
-	box-sizing:border-box;
+	   box-sizing:border-box;
     margin:0;
     padding: 0;
 }
 
 .items{
-	width:100%;
+	   width:100%;
     height:auto;
     background-color:green;
     margin:0;
@@ -104,7 +104,7 @@
     row-gap: 20px;
 }
 .item{
-    width:10px;
+    width:100px;
     height:200px;
 }
 	.item h3{
