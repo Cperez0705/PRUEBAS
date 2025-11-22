@@ -1,11 +1,11 @@
 *{
-	   box-sizing:border-box;
+box-sizing:border-box;
     margin:0;
     padding: 0;
 }
 
 .items{
-	   width:100%;
+width:100%;
     height:auto;
     background-color:green;
     margin:0;
@@ -18,13 +18,13 @@
 }
 
 .item{
-  width:15vw;
-  min-width:200px;
-  height:320px;
-  background-color:red;
-  text-align:center;
-  margin: auto;
-  padding: auto;
+width:15vw;
+    min-width:200px;
+    height:320px;
+    background-color:red;
+    text-align:center;
+    margin: auto;
+    padding: auto;
 }
 
 .item h3{
@@ -79,20 +79,20 @@
 
 .but:hover{
 	color: blue;
-	background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .pais h2 {
-  background-color: #003366;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
+background-color: #003366;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .pais h2:hover {
-  background-color: #0055aa;
+background-color: #0055aa;
 }
 
 
@@ -104,11 +104,11 @@
     row-gap: 20px;
 }
 .item{
-    width:100px;
+width:100px;
     height:200px;
 }
 	.item h3{
-   font-size: 12px;
+font-size: 12px;
     height: 30px;
 }
  .item img{
