@@ -93,7 +93,7 @@
   background-color: #0055aa;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 500px){
 .items{
     padding:10px;
     column-gap:20px;
