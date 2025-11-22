@@ -52,6 +52,7 @@
 }
 
 .dias{
+    font-size: 10px;
     width:49%;
     height:100%;
     align-content: center;
@@ -59,6 +60,7 @@
 }
 
 .desde{
+    font-size: 10px;
     width:49%;
     height:100%;
     align-content: center;
@@ -93,6 +95,8 @@
   background-color: #0055aa;
 }
 
+
+//MOVIL
 @media screen and (max-width: 500px){
 .items{
     padding:10px;
@@ -100,20 +104,21 @@
     row-gap: 20px;
 }
 .item{
-    width:120px;
+    width:10px;
     height:200px;
 }
 	.item h3{
-    height: 20px;
+   font-size: 12px;
+    height: 30px;
 }
  .item img{
     height: 120px;
 }
  .desc{
-    height: 20px;
+    height: 30px;
 }
  .but{
     background-color: lightgreen;
-    height: 20px;
+    height: 30px;
 }
 }
