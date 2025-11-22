@@ -28,7 +28,7 @@ width:15vw;
 }
 
 .item h3{
-	background-color:yellow;
+ background-color:yellow;
     height:50px;
     align-content:center;
     margin:0;
@@ -36,7 +36,7 @@ width:15vw;
 }
 
 .item img{
-	width:100%;
+ width:100%;
     height:170px;
     object-fit: cover;
 }
@@ -52,7 +52,7 @@ width:15vw;
 }
 
 .dias{
-    font-size: 10px;
+ font-size: 10px;
     width:49%;
     height:100%;
     align-content: center;
@@ -60,7 +60,7 @@ width:15vw;
 }
 
 .desde{
-    font-size: 10px;
+ font-size: 10px;
     width:49%;
     height:100%;
     align-content: center;
@@ -68,9 +68,9 @@ width:15vw;
 }
 
 .but{
-    width:100%;
+ width:100%;
     height:50px;
-	color: #ffffff;
+	   color: #ffffff;
     background-color: blue;
     align-content: center; 
     bottom:0;
@@ -83,7 +83,7 @@ width:15vw;
 }
 
 .pais h2 {
-background-color: #003366;
+ background-color: #003366;
     color: white;
     padding: 15px;
     text-align: center;
@@ -92,33 +92,33 @@ background-color: #003366;
 }
 
 .pais h2:hover {
-background-color: #0055aa;
+ background-color: #0055aa;
 }
 
 
 //MOVIL
 @media screen and (max-width: 500px){
 .items{
-    padding:10px;
-    column-gap:20px;
-    row-gap: 20px;
+    padding:5px;
+    column-gap:5px;
+    row-gap: 15px;
 }
 .item{
-width:100px;
-    height:200px;
+min-width:100px;
+    height:150px;
 }
 	.item h3{
 font-size: 12px;
     height: 30px;
 }
  .item img{
-    height: 120px;
+    height: 80px;
 }
  .desc{
-    height: 30px;
+    height: 20px;
 }
  .but{
     background-color: lightgreen;
-    height: 30px;
+    height: 20px;
 }
 }
