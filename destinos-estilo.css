@@ -3,12 +3,15 @@ box-sizing:border-box;
     font-size: 18px;
 }
 
-.titulo h1{
+.titulo{
 	background-color: #c2c2c2;
-	font-size: 1.33rem;
 	text-align: center; 
 	margin: 20px;
 	color: red;
+}
+
+.titulo h1{
+	font-size: 1.33rem;
 }
 
 .items{
