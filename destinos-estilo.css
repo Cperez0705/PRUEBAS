@@ -32,16 +32,16 @@ width:15vw;
  background-color:yellow;
     height:50px;
     align-content:center;
-    margin:0;
-    padding:0;
+    margin:auto;
+    padding:auto;
 }
 
 .item img{
  width:100%;
     height:170px;
     object-fit: cover;
-    margin:0;
-    padding: 0;
+    margin:auto;
+    padding: auto;
 }
 
 .desc{
@@ -52,8 +52,8 @@ width:15vw;
     justify-content: center;
     height:50px;
     background-color: white;
-    margin:0;
-    padding: 0;
+    margin:auto;
+    padding: auto;
 }
 
 .dias{
@@ -62,7 +62,9 @@ width:15vw;
     height:100%;
     align-content: center;
     font-weight: bold;
-    border-right:solid 1px green;    
+    border-right:solid 1px green;
+    margin:auto;
+    padding: auto;    
 }
 
 .desde{
@@ -72,6 +74,8 @@ width:15vw;
     align-content: center;
     border-left:solid 1px green;
     font-weight: bold;
+    margin:auto;
+    padding:auto;
 }
 
 .but{
