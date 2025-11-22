@@ -1,11 +1,11 @@
 *{
 box-sizing:border-box;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h1{
 	background-color: #c2c2c2;
-	font-size: 24px;
+	font-size: 1.5rem;
 	text-align: center; 
 	margin: 20px;
 	color: red;
