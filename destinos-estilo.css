@@ -96,7 +96,6 @@ width:15vw;
 }
 
 
-//MOVIL
 @media screen and (max-width: 500px){
 .items{
     padding:5px;
@@ -118,7 +117,7 @@ font-size: 12px;
     height: 20px;
 }
  .but{
-    background-color: lightgreen;
+    background-color:lightblue;
     height: 20px;
 }
 }
