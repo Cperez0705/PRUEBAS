@@ -30,13 +30,13 @@ width:15vw;
     height: 320px;
     background-color: red;
     text-align: center;
-    display: flex;
 }
 
 .item h3{
  background-color:yellow;
     height:50px;
     align-content:center;
+    top: 0;
 }
 
 .item img{
