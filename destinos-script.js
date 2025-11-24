@@ -31,8 +31,8 @@ fetch('destinos.json')
           <div class="desc">
             <div class="dias">${ciudad.DIAS}</div>
             <div class="desde">Desde: ${ciudad.PRECIO}</div>
-            <button class="but" href="#">Ver más</button>
           </div>
+          <button class="but" href="#">Ver más</button>
         `;
 
         sectionItems.appendChild(item);
