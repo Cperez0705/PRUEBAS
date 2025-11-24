@@ -54,7 +54,6 @@
 }
 
 .desc{
- 	font-size: 12px;
 	display:flex;
     flex-wrap: wrap;
     flex-grow:0;
@@ -66,6 +65,7 @@
 }
 
 .dias{
+ 	font-size: 12px;
     width: 50%;
     height: 100%;
     align-content: center;
@@ -74,6 +74,7 @@
 }
 
 .desde{
+ 	font-size: 12px;
     width: 49%;
     height: 100%;
     align-content: center;
@@ -132,6 +133,11 @@
 }
 .desc{
     height: 25px;
+}
+.dias{
+	font-size: 8px;
+}
+.desde{
 	font-size: 8px;
 }
 .but{
