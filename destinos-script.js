@@ -27,7 +27,9 @@ fetch('destinos.json')
 
         item.innerHTML = `
           <h3>${ciudad.NOMBRE}</h3>
+          <div class="imagen">
           <img src="${ciudad.IMG}" alt="${ciudad.NOMBRE}">
+          </div>
           <div class="desc">
             <div class="dias">${ciudad.DIAS}</div>
             <div class="desde">Desde: ${ciudad.PRECIO}</div>
