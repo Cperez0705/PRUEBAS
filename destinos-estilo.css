@@ -90,7 +90,6 @@
     align-content: center; 
 	transition: color 1s, background-color 1s;
 	border: solid 1px;
-	margin: 0;
 	font-size: 12px;
 }
 
@@ -125,7 +124,7 @@
 }
 .item h3{
 	font-size: 12px;
-    height: 25px;
+    height: 21px;
 }
 .imagen{
     height: 80px;
