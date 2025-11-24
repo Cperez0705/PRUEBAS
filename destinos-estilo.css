@@ -27,7 +27,7 @@
 	width:15vw;
     min-width: 200px;
     height: 320px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: red;
     text-align: center;
     display: block;
 }
@@ -37,6 +37,7 @@
     height:50px;
     align-content:center;
     top: 0;
+	borerd: solid 1px;
 }
 
 .item img{
@@ -53,35 +54,36 @@
     justify-content: center;
     height:50px;
     background-color: rgba(255, 255, 255, 0);
+	border: solid 1px;
 }
 
 .dias{
  	font-size: 10px;
-    width:50%;
-    height:100%;
+    width: 50%;
+    height: 100%;
     align-content: center;
     font-weight: bold;
-    border-right:solid 1px green;   
+    border-right: solid 1px green;   
 }
 
 .desde{
  	font-size: 10px;
-    width:49%;
-    height:100%;
+    width: 49%;
+    height: 100%;
     align-content: center;
-    border-left:solid 1px green;
+    border-left: solid 1px green;
     font-weight: bold;
 }
 
 .but{
- 	width:100%;
-    height:50px;
+ 	width: 100%;
+    height: 50px;
 	color: #ffffff;
-    background-color: blue;
+    background-color: rgba(255, 255, 255, 0);
     align-content: center; 
     bottom:0;
 	transition: color 1s, background-color 1s;
-    border: none;
+	border: solid 1px;
 }
 
 .but:hover{
@@ -106,13 +108,13 @@
 
 @media screen and (max-width: 500px){
 .items{
-    padding:5px;
-    column-gap:15px;
+    padding: 5px;
+    column-gap: 15px;
     row-gap: 15px;
 }
 .item{
-	min-width:100px;
-    height:150px;
+	min-width: 100px;
+    height: 150px;
 }
 .item h3{
 	font-size: 12px;
@@ -126,7 +128,7 @@
 }
 .but{
  	font-size: 9px;
-    background-color:lightblue;
+    background-color: lightblue;
     height: 20px;
 }
 }
