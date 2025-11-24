@@ -18,11 +18,12 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-	gap: 30px;
+	gap: 50px;
+	padding:50px;
 }
 
 .item{
-	width:15vw;
+	width: 15vw;
     min-width: 200px;
     height: 320px;
     background-color: red;
