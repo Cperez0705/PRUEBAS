@@ -1,6 +1,6 @@
 *{
-box-sizing:border-box;
-    font-size: 18px;
+	box-sizing:border-box;
+	font-size: 18px;
 }
 
 .titulo{
@@ -24,23 +24,23 @@ box-sizing:border-box;
 }
 
 .item{
-width:15vw;
+	width:15vw;
     min-width: 200px;
     height: 320px;
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0);
     text-align: center;
     display: block;
 }
 
 .item h3{
- background-color:yellow;
+ 	background-color:rgba(255, 255, 255, 0);
     height:50px;
     align-content:center;
     top: 0;
 }
 
 .item img{
- width:100%;
+ 	width:100%;
     height:170px;
     object-fit: cover;
 }
@@ -52,11 +52,11 @@ width:15vw;
     text-align:center;
     justify-content: center;
     height:50px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .dias{
- font-size: 10px;
+ 	font-size: 10px;
     width:50%;
     height:100%;
     align-content: center;
@@ -65,7 +65,7 @@ width:15vw;
 }
 
 .desde{
- font-size: 10px;
+ 	font-size: 10px;
     width:49%;
     height:100%;
     align-content: center;
@@ -74,13 +74,13 @@ width:15vw;
 }
 
 .but{
- width:100%;
+ 	width:100%;
     height:50px;
-	   color: #ffffff;
+	color: #ffffff;
     background-color: blue;
     align-content: center; 
     bottom:0;
-	   transition: color 1s, background-color 1s;
+	transition: color 1s, background-color 1s;
     border: none;
 }
 
@@ -91,7 +91,7 @@ width:15vw;
 }
 
 .pais h2 {
- background-color: #003366;
+ 	background-color: #003366;
     color: white;
     padding: 15px;
     text-align: center;
@@ -100,7 +100,7 @@ width:15vw;
 }
 
 .pais h2:hover {
- background-color: #0055aa;
+ 	background-color: #0055aa;
 }
 
 
@@ -111,21 +111,21 @@ width:15vw;
     row-gap: 15px;
 }
 .item{
-min-width:100px;
+	min-width:100px;
     height:150px;
 }
-	.item h3{
-font-size: 12px;
+.item h3{
+	font-size: 12px;
     height: 30px;
 }
- .item img{
+.item img{
     height: 80px;
 }
- .desc{
+.desc{
     height: 20px;
 }
- .but{
- font-size: 9px;
+.but{
+ 	font-size: 9px;
     background-color:lightblue;
     height: 20px;
 }
