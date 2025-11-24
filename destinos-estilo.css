@@ -12,12 +12,13 @@
 }
 
 .items{
-	width:100%;
-    height:auto;
+	width: 100%;
+    height: auto;
     background-color: green;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-wrap: wrap;
+	gap: 30px;
 }
 
 .item{
@@ -115,8 +116,7 @@
 @media screen and (max-width: 500px){
 .items{
     padding: 5px;
-    column-gap: 15px;
-    row-gap: 15px;
+    gap: 15px;
 }
 .item{
 	min-width: 100px;
