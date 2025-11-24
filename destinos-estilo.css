@@ -29,6 +29,7 @@ width:15vw;
     height: 320px;
     background-color: red;
     text-align: center;
+    display: block;
 }
 
 .item h3{
