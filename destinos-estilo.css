@@ -128,15 +128,15 @@
 	font-size: 12px;
     height: 30px;
 }
-.item img{
+.imagen{
     height: 80px;
 }
 .desc{
-    height: 20px;
+    height: 25px;
 }
 .but{
  	font-size: 9px;
     background-color: lightblue;
-    height: 20px;
+    height: 15px;
 }
 }
