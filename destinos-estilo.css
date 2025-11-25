@@ -28,7 +28,6 @@
     height: 320px;
     background-color: red;
     text-align: center;
-    display: block;
 	margin: 0;
 }
 
@@ -142,5 +141,7 @@
 .but{
  	font-size: 8px;
     height: 15px;
+	margin: 0;
+	padding: 0;
 }
 }
