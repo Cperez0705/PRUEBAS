@@ -16,7 +16,6 @@
     background-color: green;
     display: flex;
     justify-content: center;
-    animation: scroll 20s linear infinite;
 	gap: 50px;
 	padding:50px;
 }
@@ -28,6 +27,7 @@
     background-color: red;
     text-align: center;
 	margin: 0;
+animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll{
