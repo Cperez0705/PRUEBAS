@@ -22,7 +22,7 @@
 }
 
 .item{
-	width: 15vw;
+	width: max-content;
     min-width: 200px;
     height: 320px;
     background-color: red;
@@ -35,7 +35,7 @@ from{
 transform: translateX(0);
 }
 to {
-transform: translateX(50%)
+transform: translateX(-50%)
 }
 
 }
