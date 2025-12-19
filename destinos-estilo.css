@@ -27,7 +27,7 @@
     background-color: red;
     text-align: center;
 	margin: 0;
-animation: scroll 10s linear infinite;
+animation: scroll 5s linear infinite;
 }
 
 @keyframes scroll{
