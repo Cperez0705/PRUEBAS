@@ -18,6 +18,7 @@
     justify-content: center;
 	gap: 50px;
 	padding:50px;
+animation: scroll 20s linear infinite;
 }
 
 .item{
@@ -27,7 +28,6 @@
     background-color: red;
     text-align: center;
 	margin: 0;
-animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll{
