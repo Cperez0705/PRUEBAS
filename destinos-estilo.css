@@ -27,7 +27,7 @@
     background-color: red;
     text-align: center;
 	margin: 0;
-animation: scroll 5s linear infinite;
+animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll{
@@ -35,7 +35,7 @@ from{
 transform: translateX(0);
 }
 to {
-transform: translateX(100%)
+transform: translateX(-100%)
 }
 
 }
