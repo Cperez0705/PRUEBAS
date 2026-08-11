@@ -102,6 +102,14 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
     var ahora = new Date();
 
+    // Limpieza de migración: 'tab-hidden' era la clase del sistema VIEJO
+    // (manual), ya reemplazado por data-vence. Puede quedar pegada en
+    // pestañas editadas a mano antes de este sistema -- si no se quita,
+    // sigue ocultando la pestaña aunque ya tenga una fecha vigente nueva.
+    document.querySelectorAll('.tab.tab-hidden').forEach(function (boton) {
+        boton.classList.remove('tab-hidden');
+    });
+
     document.querySelectorAll('.tab[data-vence]').forEach(function (boton) {
         var vence = new Date(boton.getAttribute('data-vence'));
         if (isNaN(vence.getTime()) || ahora <= vence) return;
@@ -113,14 +121,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.querySelectorAll('.tab-container').forEach(function (container) {
-        var activa = container.querySelector('.tab.active');
-        var sigueVigente = activa && activa.style.display !== 'none';
-        if (!sigueVigente) {
-            var visibles = Array.prototype.filter.call(
-                container.querySelectorAll('.tab'),
-                function (t) { return t.style.display !== 'none'; }
-            );
-            if (visibles.length > 0) visibles[0].click();
+        var visibles = Array.prototype.filter.call(
+            container.querySelectorAll('.tab'),
+            function (t) { return t.style.display !== 'none'; }
+        );
+        if (visibles.length === 0) return;
+        // Siempre debe estar activa la PRIMERA pestaña visible, sin
+        // importar cuál venía marcada 'active' en el HTML -- antes solo se
+        // reasignaba si la activa actual se ocultaba, pero eso dejaba
+        // activa una pestaña más adelante en la lista aunque una anterior
+        // (y también vigente) debiera tener prioridad (11/08/2026).
+        if (visibles[0] !== container.querySelector('.tab.active')) {
+            visibles[0].click();
         }
     });
 });
