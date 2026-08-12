@@ -92,27 +92,30 @@ document.addEventListener("DOMContentLoaded", function () {
  });
 
 //VIGENCIA POR UBICACIÓN
-// Reemplaza al viejo sistema .activar/.ocultar/.tab-hidden (ya no se
-// usan). Cada BOTÓN de ubicación (.tab, data-tab="tab-XX") puede traer
-// data-vence="AAAA-MM-DDTHH:MM:SS-05:00" con su fecha límite. Al cargar
-// la página, se oculta el botón cuya fecha ya pasó, y junto con él su
-// contenido correspondiente (el div cuyo id es igual al data-tab del
-// botón). data-vence vive SOLO en el botón -- no hace falta repetirlo en
-// el contenido.
+// Cada BOTÓN de ubicación (.tab, data-tab="tab-XX") puede traer
+// data-vence="AAAA-MM-DDTHH:MM:SS-05:00" con su fecha límite -- esta es
+// la forma OFICIAL de marcar algo como vencido de aquí en adelante
+// (12/08/2026: se dejó de escribir/editar 'tab-hidden' a propósito, tanto
+// para lo vencido como para paneles de respaldo tipo 'tab-100' -- todo se
+// resuelve con una fecha, sin excepciones ni clases especiales).
+//
+// 'tab-hidden' se sigue RESPETANDO acá como red de seguridad mientras se
+// termina de migrar cada marca -- si una pestaña vieja todavía la trae
+// (de antes de este sistema) sigue ocultándose igual, para no exponer
+// contenido vencido por accidente. Pero ya no se le escribe a nada nuevo,
+// y no hace falta quitarla a mano: ambas señales (tab-hidden o
+// data-vence vencido) se tratan igual, sin prioridad entre ellas.
 document.addEventListener('DOMContentLoaded', function () {
     var ahora = new Date();
 
-    // Limpieza de migración: 'tab-hidden' era la clase del sistema VIEJO
-    // (manual), ya reemplazado por data-vence. Puede quedar pegada en
-    // pestañas editadas a mano antes de este sistema -- si no se quita,
-    // sigue ocultando la pestaña aunque ya tenga una fecha vigente nueva.
-    document.querySelectorAll('.tab.tab-hidden').forEach(function (boton) {
-        boton.classList.remove('tab-hidden');
-    });
-
-    document.querySelectorAll('.tab[data-vence]').forEach(function (boton) {
-        var vence = new Date(boton.getAttribute('data-vence'));
-        if (isNaN(vence.getTime()) || ahora <= vence) return;
+    document.querySelectorAll('.tab').forEach(function (boton) {
+        var vencidoPorFecha = false;
+        if (boton.hasAttribute('data-vence')) {
+            var vence = new Date(boton.getAttribute('data-vence'));
+            vencidoPorFecha = !isNaN(vence.getTime()) && ahora > vence;
+        }
+        var vencidoPorClaseVieja = boton.classList.contains('tab-hidden');
+        if (!vencidoPorFecha && !vencidoPorClaseVieja) return;
 
         boton.style.display = 'none';
         var idContenido = boton.getAttribute('data-tab');
@@ -133,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // (y también vigente) debiera tener prioridad (11/08/2026).
         if (visibles[0] !== container.querySelector('.tab.active')) {
             visibles[0].click();
+
         }
     });
 });

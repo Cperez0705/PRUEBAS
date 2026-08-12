@@ -465,3 +465,14 @@ html{
             margin-left:2px;
           	}
          }
+
+/* Panel de respaldo tab-100 ("Estamos actualizando este programa")
+   Confirmado 11/08/2026 -- oculto por defecto vía data-vence centinela
+   en el botón, se muestra a mano cuando Cristian quite/cambie esa fecha. */
+.contacto-fallback { text-align: center; }
+.contacto-fallback-msg { font-family: K2D, sans-serif; font-size: 16px; color: #333; margin-bottom: 24px; }
+.contacto-fallback-botones { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.contacto-fallback-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 30px; font-weight: bold; text-decoration: none; color: #fff; font-family: K2D, sans-serif; }
+.contacto-fallback-wsp { background: #25D366; }
+.contacto-fallback-mail { background: #2A5F9A; }
+.contacto-fallback-btn:hover { opacity: 0.85; }
