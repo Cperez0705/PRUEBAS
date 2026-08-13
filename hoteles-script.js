@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!vencidoPorFecha && !vencidoPorClaseVieja) return;
 
         boton.style.display = 'none';
+        boton.dataset.vencido = 'true';
         var idContenido = boton.getAttribute('data-tab');
         var contenido = idContenido && document.getElementById(idContenido);
         if (contenido) contenido.style.display = 'none';
@@ -138,5 +139,79 @@ document.addEventListener('DOMContentLoaded', function () {
             visibles[0].click();
 
         }
+    });
+});
+
+//SELECTOR DE AÑO (agregado 12/08/2026)
+// Si un ítem tiene más de un grupo "<div class="title"><h3>TARIFAS
+// <AÑO></h3></div>" (ej. 2026 y 2027 al mismo tiempo, caso real:
+// Catalonia), agrega una barra arriba de los botones para mostrar solo
+// un año a la vez -- evita que se acumulen demasiados botones juntos
+// cuando conviven varios años. Si solo hay un grupo (el caso normal de
+// hoy en el resto de las marcas), no hace nada -- se ve exactamente
+// igual que siempre, cero cambio visual.
+//
+// Corre DESPUÉS del bloque de vigencia (arriba) a propósito -- así ya
+// sabe qué botones quedaron ocultos por fecha vencida (marcados con
+// dataset.vencido) y nunca los vuelve a mostrar al cambiar de año; y ya
+// sabe cuál quedó 'active' por vigencia, para elegir ese año por
+// defecto en vez de adivinar.
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.tab-container').forEach(function (container) {
+        var titulos = Array.prototype.filter.call(
+            container.querySelectorAll('.title'),
+            function (t) {
+                var h3 = t.querySelector('h3');
+                return h3 && /TARIFAS\s+\d{4}/i.test(h3.textContent);
+            }
+        );
+        if (titulos.length < 2) return;
+
+        var grupos = titulos.map(function (titleDiv) {
+            var anio = titleDiv.querySelector('h3').textContent.match(/\d{4}/)[0];
+            var botones = [];
+            var el = titleDiv.nextElementSibling;
+            while (el && !(el.classList.contains('title'))) {
+                if (el.classList.contains('tab')) botones.push(el);
+                el = el.nextElementSibling;
+            }
+            return { anio: anio, titleDiv: titleDiv, botones: botones };
+        });
+
+        var grupoActivo = grupos.find(function (g) {
+            return g.botones.some(function (b) { return b.classList.contains('active'); });
+        }) || grupos[0];
+
+        function mostrarGrupo(grupoElegido) {
+            grupos.forEach(function (g) {
+                var mostrar = g === grupoElegido;
+                g.titleDiv.style.display = mostrar ? '' : 'none';
+                g.botones.forEach(function (b) {
+                    if (b.dataset.vencido === 'true') return;
+                    b.style.display = mostrar ? '' : 'none';
+                });
+            });
+        }
+
+        var selector = document.createElement('div');
+        selector.className = 'year-selector';
+        grupos.forEach(function (g) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'year-btn' + (g === grupoActivo ? ' active' : '');
+            btn.textContent = 'TARIFAS ' + g.anio;
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                selector.querySelectorAll('.year-btn').forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                mostrarGrupo(g);
+                var primerVisible = g.botones.find(function (b) { return b.style.display !== 'none'; });
+                if (primerVisible) primerVisible.click();
+            });
+            selector.appendChild(btn);
+        });
+
+        titulos[0].parentNode.insertBefore(selector, titulos[0]);
+        mostrarGrupo(grupoActivo);
     });
 });

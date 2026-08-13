@@ -476,3 +476,48 @@ html{
 .contacto-fallback-wsp { background: #25D366; }
 .contacto-fallback-mail { background: #2A5F9A; }
 .contacto-fallback-btn:hover { opacity: 0.85; }
+
+/* Selector de año (agregado 12/08/2026) -- aparece solo cuando conviven
+   2+ grupos "TARIFAS <AÑO>" en el mismo ítem (ej. Catalonia 2026+2027).
+   Mismos colores de marca que el resto (#2A5F9A), para que no se vea
+   como un parche ajeno al resto de la página. */
+.year-selector {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	}
+
+.year-btn {
+	flex: 1 1 140px;
+	padding: 10px;
+	border-radius: 0.5vw;
+	border: 2px solid #2A5F9A;
+	background-color: #fff;
+	color: #2A5F9A;
+	font-family: K2D, sans-serif;
+	font-weight: bold;
+	font-size: 1vw;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+	}
+
+.year-btn:hover {
+	background-color: orange;
+	border-color: orange;
+	color: #fff;
+	}
+
+.year-btn.active {
+	background-color: #2A5F9A;
+	color: #fff;
+	}
+
+@media screen and (max-width: 555px) {
+	.year-btn {
+		font-size: 12px;
+		padding: 8px;
+		}
+	}
