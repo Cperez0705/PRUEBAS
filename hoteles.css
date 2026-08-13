@@ -479,13 +479,19 @@ html{
 
 /* Selector de año (agregado 12/08/2026) -- aparece solo cuando conviven
    2+ grupos "TARIFAS <AÑO>" en el mismo ítem (ej. Catalonia 2026+2027).
-   Mismos colores de marca que el resto (#2A5F9A), para que no se vea
-   como un parche ajeno al resto de la página. */
+   CORREGIDO 13/08/2026: el año activo debe verse igual de "seleccionado"
+   que ya se ve una pestaña .tab activa en el resto del sitio (fondo
+   blanco + borde naranja) -- NO fondo azul, porque el fondo del
+   contenedor YA es azul y el botón activo se volvía invisible (Cristian,
+   confirmado con captura real). El margin-top separa el selector del
+   link "Hoteles", que está en position:absolute y no ocupa espacio
+   propio -- sin este margen, el selector quedaba pegado encima tapándolo. */
 .year-selector {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 8px;
 	width: 100%;
+	margin-top: 3vh;
 	padding: 10px;
 	box-sizing: border-box;
 	}
@@ -494,28 +500,31 @@ html{
 	flex: 1 1 140px;
 	padding: 10px;
 	border-radius: 0.5vw;
-	border: 2px solid #2A5F9A;
-	background-color: #fff;
-	color: #2A5F9A;
+	border: solid 0.15vw transparent;
+	background-color: #ccc;
+	color: #000;
 	font-family: K2D, sans-serif;
 	font-weight: bold;
 	font-size: 1vw;
 	cursor: pointer;
-	transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 	}
 
 .year-btn:hover {
 	background-color: orange;
-	border-color: orange;
 	color: #fff;
 	}
 
 .year-btn.active {
-	background-color: #2A5F9A;
-	color: #fff;
+	background-color: #fff;
+	color: #2A5F9A;
+	border: solid 0.15vw #ff9524;
 	}
 
 @media screen and (max-width: 555px) {
+	.year-selector {
+		margin-top: 4vh;
+		}
 	.year-btn {
 		font-size: 12px;
 		padding: 8px;
