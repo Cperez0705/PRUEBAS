@@ -156,6 +156,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // dataset.vencido) y nunca los vuelve a mostrar al cambiar de año; y ya
 // sabe cuál quedó 'active' por vigencia, para elegir ese año por
 // defecto en vez de adivinar.
+//
+// CORREGIDO 14/08/2026 -- caso real: VIVA WEEK, donde TODAS las pestañas
+// de 2026 vencieron a la vez. Antes se armaba un botón "TARIFAS 2026"
+// igual, aunque llevara a una pantalla vacía (nada visible adentro).
+// Ahora un grupo cuyos botones están TODOS vencidos ni siquiera entra al
+// selector -- ni su botón ni su título "TARIFAS <año>" se muestran.
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.tab-container').forEach(function (container) {
         var titulos = Array.prototype.filter.call(
@@ -165,9 +171,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 return h3 && /TARIFAS\s+\d{4}/i.test(h3.textContent);
             }
         );
-        if (titulos.length < 2) return;
+        if (titulos.length === 0) return;
 
-        var grupos = titulos.map(function (titleDiv) {
+        var todosLosGrupos = titulos.map(function (titleDiv) {
             var anio = titleDiv.querySelector('h3').textContent.match(/\d{4}/)[0];
             var botones = [];
             var el = titleDiv.nextElementSibling;
@@ -177,6 +183,26 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             return { anio: anio, titleDiv: titleDiv, botones: botones };
         });
+
+        // Un grupo cuenta como "con contenido" si tiene al menos un botón
+        // que NO quedó marcado vencido por el bloque de vigencia de arriba.
+        var grupos = todosLosGrupos.filter(function (g) {
+            return g.botones.some(function (b) { return b.dataset.vencido !== 'true'; });
+        });
+
+        // Los grupos totalmente vencidos (ninguno vigente adentro) se
+        // ocultan del todo -- ni título ni selector, no llevan a nada.
+        todosLosGrupos.forEach(function (g) {
+            if (grupos.indexOf(g) === -1) g.titleDiv.style.display = 'none';
+        });
+
+        if (grupos.length < 2) {
+            // 0 o 1 grupo con contenido real: no hace falta selector.
+            // Si queda exactamente 1, se asegura que su título esté visible
+            // (por si algún filtro previo lo hubiera ocultado).
+            if (grupos.length === 1) grupos[0].titleDiv.style.display = '';
+            return;
+        }
 
         var grupoActivo = grupos.find(function (g) {
             return g.botones.some(function (b) { return b.classList.contains('active'); });
@@ -211,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
             selector.appendChild(btn);
         });
 
-        titulos[0].parentNode.insertBefore(selector, titulos[0]);
+        grupos[0].titleDiv.parentNode.insertBefore(selector, grupos[0].titleDiv);
         mostrarGrupo(grupoActivo);
     });
 });
