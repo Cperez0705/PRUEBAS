@@ -1,0 +1,316 @@
+/* opcionales-style.css
+   Colección `Projects` (COLOMBIA OPCIONALES) — campo `indiceOpcionales`.
+   Reconstruido desde cero a partir del HTML inline original de vcrreps.com
+   (Cartagena), limpiando reglas no usadas (ej. .tab2/.tab-content2, que
+   existían en el CSS viejo pero ningún elemento del HTML las usaba).
+   Se sirve vía CDN (jsDelivr) en vez de quedar inline en cada ítem.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: K2D, sans-serif;
+}
+
+/* -------- Header: botón Descargar (alineado con el sidebar) + Buscador -------- */
+.opcionales-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.header-download {
+  width: 15%;
+  flex-shrink: 0;
+}
+
+.header-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#searchInput {
+  font-size: 1rem;
+  text-align: center;
+  width: 260px;
+  max-width: 60%;
+  padding: 6px;
+}
+
+/* -------- Botón Descargar Opcionales -------- */
+.btnword2 {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-size: small;
+  text-align: center;
+  background-color: #f3f3f3;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2A5F9A;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #2A5F9A;
+  font-family: K2D, sans-serif;
+  cursor: pointer;
+  padding: 8px 6px;
+}
+
+.btnword2:hover {
+  background-color: #2A5F9A;
+  color: #FFF;
+}
+
+/* -------- Layout general -------- */
+.contenido {
+  background-color: #FFF;
+  padding: 5px;
+  /* SIN clearfix a propósito: el alto de .contenido lo define solo
+     .tab-contents (que NO flota). El sidebar flota y puede seguir
+     cayendo más abajo de forma independiente -- así "Detalles" queda
+     pegado al contenido corto en vez de esperar al sidebar más alto. */
+}
+
+/* -------- Menú de excursiones (izquierda) -------- */
+.tabs-container {
+  float: left;
+  width: 15%;
+  word-wrap: break-word;
+}
+
+.tabs-container h3 {
+  font-size: 1.25em;
+  text-align: center;
+  margin: 10px auto;
+  color: #2A5F9A;
+}
+
+.tabs {
+  margin: 15px auto 10px;
+  list-style: none;
+  background-color: #2A5F9A;
+  padding: 5px;
+  width: 90%;
+  max-width: 220px;
+  font-size: 0.7em;
+  font-weight: bold;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.tab-link {
+  margin: 5px 0;
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+  padding: 9px;
+  background-color: #ccc;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+  display: block;
+}
+
+.tab-link:hover {
+  background-color: orange;
+  color: #fff;
+}
+
+.tab-link.active {
+  background-color: #fff;
+  color: #2A5F9A;
+}
+
+.tab-link.hidden {
+  display: none;
+}
+
+/* -------- Contenido de la excursión (derecha) --------
+   NO flota (a diferencia del sidebar) -- se corre con margin-left para
+   dejarle sitio al sidebar flotante, sin depender de su altura. */
+.tab-contents {
+  margin-left: 16%;
+  background-color: #F2F2F2;
+}
+
+.tab-content {
+  display: none;
+  margin: 10px;
+  text-align: justify;
+}
+
+.tab-content h3 {
+  color: #2A5F9A;
+}
+
+.tab-content p {
+  font-size: 15px;
+}
+
+.tab-content ul.incluye {
+  margin-left: -10px;
+}
+
+.izquierda {
+  position: relative;
+  animation: animateleft 0.4s;
+}
+
+@keyframes animateleft {
+  from { left: -60px; opacity: 0; }
+  to   { left: 0; opacity: 1; }
+}
+
+/* -------- Regulaciones / Cancelaciones / Documentación (pie) --------
+   Mismo margin-left que .tab-contents: queda pegada a la columna
+   derecha, debajo del contenido corto, mientras el sidebar (si es más
+   alto) sigue cayendo por su cuenta a la izquierda -- sin superponerse
+   porque nunca ocupan el mismo rango horizontal. */
+.detalles {
+  background-color: #F2F2F2;
+  margin-left: 16%;
+  margin-top: 2%;
+  padding-bottom: 10px;
+}
+
+.tab-container3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.tab3 {
+  background-color: #c2c2c2;
+  color: #2A5F9A;
+  border-radius: 10px 10px 0 0;
+  padding: 6px 10px;
+  margin: 2.5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  flex: 1 1 0;
+}
+
+.tab3:hover {
+  background-color: orange;
+  color: #ffffff;
+}
+
+.tab3.active {
+  background-color: #2A5F9A;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.tab-content3 {
+  display: none;
+  background-color: #F2F2F2;
+  text-align: justify;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* -------- Tabla de tarifas (.tg = "table grid", mismo nombre histórico) -------- */
+.tg-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 10px auto;
+}
+
+.tg td {
+  border-style: solid;
+  border-width: 1px;
+  font-family: K2D, sans-serif;
+  font-size: 0.9em;
+  overflow: hidden;
+  padding: 5px 10px;
+  word-break: normal;
+}
+
+.tg th {
+  border-style: solid;
+  border-width: 1px;
+  border-bottom: 2px solid #000000;
+  font-family: K2D, sans-serif;
+  font-size: 0.9em;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 5px;
+  word-break: normal;
+}
+
+.tg .tg-3csz {
+  background-color: #3531ff;
+  border-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  position: sticky;
+  text-align: center;
+  top: -1px;
+  vertical-align: middle;
+}
+
+.tg .tg-anz3 {
+  border-color: #000000;
+  color: #000000;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tg tr:hover {
+  background-color: orange;
+}
+
+/* -------- Responsive --------
+   El sidebar de excursiones se queda angosto y fijo a la izquierda en
+   TODOS los anchos (nunca se apila a ancho completo) -- así se comporta
+   el sitio real hoy (confirmado con capturas de Cristian a 1054px y
+   391px de ancho): a medida que se achica la pantalla, se reduce fuente
+   y padding, pero el layout de 2 columnas se mantiene siempre. */
+@media only screen and (max-width: 700px) {
+  .tg th { font-size: 0.6em; border-bottom: 1px solid #000000; }
+  .tg td { font-size: 0.65em; }
+}
+
+@media only screen and (max-width: 550px) {
+  body { font-size: 0.7em; }
+
+  .tabs {
+    width: 100%;
+    max-width: none;
+    font-size: 0.55em;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+
+  .tab-link { padding: 5px; border-radius: 4px; margin: 4px 0; }
+
+  .tabs-container { width: 22%; }
+  .tab-contents { margin-left: 24%; }
+  .detalles { margin-left: 24%; }
+  .header-download { width: 22%; }
+
+  .tabs-container h3 { font-size: 0.6rem; }
+
+  .tab3 { font-size: 0.7em; padding: 4px 6px; }
+  .tab-content3 { font-size: 0.7rem; padding: 4px; }
+
+  #searchInput { max-width: 55%; font-size: 0.75rem; }
+  .btnword2 { font-size: 0.7em; padding: 6px 8px; }
+
+  .tg th { font-size: 0.55em; padding: 2px; }
+  .tg td { font-size: 0.55em; padding: 2px; }
+}
