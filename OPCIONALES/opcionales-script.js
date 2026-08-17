@@ -50,6 +50,31 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add("active");
     });
   }
+
+  // -------- Sub-pestañas anidadas (.tab2 / .tab-content2) --------
+  // Escuchadas por delegación en document (no en tabLinks/document.querySelectorAll
+  // directo) porque .tab2 vive DENTRO de un .tab-content que puede estar oculto
+  // al cargar la página -- delegar evita perder el listener en contenido que se
+  // muestra/oculta dinámicamente.
+  document.addEventListener("click", function (e) {
+    var boton = e.target.closest(".tab2");
+    if (!boton) return;
+    e.preventDefault();
+
+    var subId = boton.getAttribute("data-tab2");
+    var contenedorPadre = boton.closest(".tab-content");
+    if (!contenedorPadre) return;
+
+    var subContents = contenedorPadre.querySelectorAll(".tab-content2");
+    subContents.forEach(function (el) { el.style.display = "none"; });
+
+    var subContent = contenedorPadre.querySelector("#" + CSS.escape(subId));
+    if (subContent) subContent.style.display = "block";
+
+    var subActivo = contenedorPadre.querySelector(".tab2.active");
+    if (subActivo) subActivo.classList.remove("active");
+    boton.classList.add("active");
+  });
 });
 
 /* -------- Buscador de excursiones --------
