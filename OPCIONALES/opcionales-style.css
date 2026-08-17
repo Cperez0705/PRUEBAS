@@ -155,6 +155,53 @@ body {
   margin-left: -10px;
 }
 
+/* -------- Sub-pestañas anidadas (ej. atracciones dentro de un combo/parque) -------- */
+.tab-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 15px 0 5px;
+  border-bottom: 2px solid #2A5F9A;
+  padding-bottom: 5px;
+}
+
+.tab2 {
+  background-color: #ccc;
+  color: #333;
+  border-radius: 5px 5px 0 0;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+  flex: 1 1 150px; /* crece para llenar el espacio de su fila, sin huecos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab2:hover {
+  background-color: orange;
+  color: #fff;
+}
+
+.tab2.active {
+  background-color: #2A5F9A;
+  color: #fff;
+}
+
+.tab-content2 {
+  display: none;
+  padding: 10px 0;
+  text-align: justify;
+}
+
+.tab-content2 h4 {
+  color: #2A5F9A;
+  margin-top: 0;
+}
+
 .izquierda {
   position: relative;
   animation: animateleft 0.4s;
